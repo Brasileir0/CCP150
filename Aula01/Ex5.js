@@ -34,7 +34,7 @@ class Funcionario extends Pessoa {
     }
 
     toString() {
-        return `${super.toString()} | Admissao: ${this.admissao.toString()} | Salario: ${salario}`
+        return `${super.toString()} | Admissao: ${this.admissao.toString()} | Salario: ${this.salario}`
     }
 }
 
@@ -50,11 +50,16 @@ class Gerente extends Funcionario {
     }
 
     toString() {
-        return `${super.toString} | Departamento: ${this.departamento} | Promoção: ${this.promocaoGerente}`
+        return `${super.toString()} | Departamento: ${this.departamento} | Promoção: ${this.promocaoGerente}`
     }
 }
 
 const data1 = new Data(10, 5, 22);
+const pessoa1 = new Pessoa("Carlos", "123.456.789-00", new Data(17,4,99));
+const funcionario1 = new Funcionario("Marcos", "987.654.321-00", new Data(18,5,95), new Data(18,5,17), "3500");
+const gerente1 = new Gerente("Luiz", "111.222.333-44", new Data(19,6,89), new Data(20,6,22), 50000, 2, new Data(22,11,23));
 
 console.log(data1.toString());
-console.log("Carlos", "123.456.789-00", new Data(17,4,99))
+console.log(pessoa1.toString());
+console.log(funcionario1.toString());
+console.log(gerente1.toString());
